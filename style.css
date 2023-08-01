@@ -4,20 +4,45 @@
     box-sizing: border-box;
 }
 
-h1{
+:root{
+    --color1 : #18005f;
+    --color2 : #20005E;
+    --color3 : #28005D;
+    --color4 : #2F005C;
+    --color5 : #37005B;
+    --color6 : #3F0059;
+    --color7 : #470058;
+    --color8 : #4E0057;
+    --color9 : #560056;
+    --color10 : #5E0055;
+
+    --text: white;
+    
+}
+
+body{
+    background-image: linear-gradient(to bottom, var(--color1), var(--color2), var(--color3), var(--color4), var(--color5), var(--color6), var(--color7));
+    color: var(--text);
+    height: 100vh;
+}
+
+.title{    
     text-align: center;
-    font-size: 30px;
-    height: 5vh;
-    background-color: rgb(30, 19, 131);
-    color: white;
+    height: 7vh;
+    background-color: var(--color1);
+    outline: 2px solid #f72585;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 10px #f72585;
 }
 
 .content{
-    outline: 2px solid rgb(48, 34, 156);
+    outline: 2px solid #f72585;
     width: 80%;
-    margin: 10px auto;
-    height: 90vh;
-    border-radius: 20px;
+    margin: 40px auto;
+    height: 80vh;
+    border-radius: 10px;
 }
 
 .content{
@@ -40,6 +65,14 @@ label{
     margin: 10px 0;
     padding: 3px;
     font-size: 20px;
+    border: none;
+    background: none;
+    color: var(--text);
+    border-bottom: 1px solid var(--text);
+}
+
+.text:focus{
+    outline: none;
 }
 
 .buttons{
@@ -52,7 +85,7 @@ label{
 .btn{
     width: 200px;
     height: 40px;
-    color: white;
+    color: var(--text);
     background-color: blueviolet;
     border-radius: 5px;
     cursor: pointer;
