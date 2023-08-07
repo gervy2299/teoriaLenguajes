@@ -16,6 +16,7 @@ const pop = document.querySelector('#cont');
 function Limpiar(){
     leng1.value = "";
     leng2.value = "";
+    valrepe.value = "";
     leng1.focus();
 }
 
@@ -128,7 +129,8 @@ repe.onclick = () => {
   console.log('click rep');
 
     if(validarCampo(leng1.value) & validarCampo(leng2.value)){
-        pop.style.display = 'flex';        
+        pop.style.display = 'flex';    
+        valrepe.focus();    
     }else {
         alert("LLene los campos requeridos.");
         Limpiar();
@@ -141,7 +143,7 @@ cantrepe.onclick = () => {
         let l2 = separarPorComa(leng2.value);        
         let cantRep = valrepe.value;
 
-        sol.innerHTML= "<span>L1 = {"+repetirLenguaje(l1, cantRep)+"}</span> <span>L2 = {"+repetirLenguaje(l2, cantRep)+"}</span>"
+        sol.innerHTML= "<span>L1 = {"+repetirLenguaje(l1, cantRep)+"}</span><span>L2 = {"+repetirLenguaje(l2, cantRep)+"}</span>"
         Limpiar();
 
 }

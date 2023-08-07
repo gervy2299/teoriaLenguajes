@@ -171,3 +171,7 @@ code{
 .popup > input[type="button"] {
     margin: 0;
 }
+
+span{
+    display: block;
+}
