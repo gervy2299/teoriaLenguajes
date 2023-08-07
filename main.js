@@ -126,9 +126,9 @@ union.onclick = () => {
 }
 
 repe.onclick = () => {
-  console.log('click rep');
+  // console.log('click rep');
 
-    if(validarCampo(leng1.value) & validarCampo(leng2.value)){
+    if(validarCampo(leng1.value) || validarCampo(leng2.value)){
         pop.style.display = 'flex';    
         valrepe.focus();    
     }else {
@@ -139,12 +139,12 @@ repe.onclick = () => {
 
 cantrepe.onclick = () => {
   pop.style.display = 'none'; 
-  let l1 = separarPorComa(leng1.value);
-        let l2 = separarPorComa(leng2.value);        
-        let cantRep = valrepe.value;
+  let l1 = separarPorComa(leng1.value || '0');
+  let l2 = separarPorComa(leng2.value || '0');        
+  let cantRep = valrepe.value;
 
-        sol.innerHTML= "<span>L1 = {"+repetirLenguaje(l1, cantRep)+"}</span><span>L2 = {"+repetirLenguaje(l2, cantRep)+"}</span>"
-        Limpiar();
+  sol.innerHTML= "<span>L1 = {"+repetirLenguaje(l1, cantRep)+"}</span><span>L2 = {"+repetirLenguaje(l2, cantRep)+"}</span>"
+  Limpiar();
 
 }
 

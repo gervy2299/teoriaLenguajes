@@ -103,7 +103,7 @@ label{
 
 code{
     font-size: 20px;
-    outline: 1px solid var(--color10);
+    /* outline: 1px solid var(--color10); */
     display: inline-block;
     width: 100%;
     white-space: pre-wrap;
@@ -170,6 +170,11 @@ code{
 
 .popup > input[type="button"] {
     margin: 0;
+}
+
+.resp > input[type="button"] {
+    margin: 0 10%;
+    width: 80%;    
 }
 
 span{
