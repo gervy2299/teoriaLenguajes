@@ -1,12 +1,16 @@
 // VARIABLES
 const leng1 = document.querySelector('#lengUno');
 const leng2 = document.querySelector('#lengDos');
+const valrepe = document.querySelector('#repeticiones');
+
 
 const conca = document.querySelector('#conca');
 const union = document.querySelector('#unir');
 const repe = document.querySelector('#rep');
+const cantrepe = document.querySelector('#cantrepe');
 
 const sol = document.querySelector('#res');
+const pop = document.querySelector('#cont');
 
 // FUNCIONES
 function Limpiar(){
@@ -121,16 +125,24 @@ union.onclick = () => {
 }
 
 repe.onclick = () => {
-    if(validarCampo(leng1.value) & validarCampo(leng2.value)){
-        let l1 = separarPorComa(leng1.value);
-        let l2 = separarPorComa(leng2.value);
-        let cantRep = 3;
+  console.log('click rep');
 
-        sol.innerHTML= "<span>L1 = {"+repetirLenguaje(l1, cantRep)+"}</span> <span>L2 = {"+repetirLenguaje(l2, cantRep)+"}</span>"
-        Limpiar();
+    if(validarCampo(leng1.value) & validarCampo(leng2.value)){
+        pop.style.display = 'flex';        
     }else {
         alert("LLene los campos requeridos.");
         Limpiar();
     }
+}
+
+cantrepe.onclick = () => {
+  pop.style.display = 'none'; 
+  let l1 = separarPorComa(leng1.value);
+        let l2 = separarPorComa(leng2.value);        
+        let cantRep = valrepe.value;
+
+        sol.innerHTML= "<span>L1 = {"+repetirLenguaje(l1, cantRep)+"}</span> <span>L2 = {"+repetirLenguaje(l2, cantRep)+"}</span>"
+        Limpiar();
+
 }
 
